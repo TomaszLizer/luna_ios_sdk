@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
 
 # enable when building as framework
- s.source           = { :http => 'https://github.com/indigo-d/luna_ios_sdk/releases/download/v0.2.31/LunaSDK-0.2.31.zip' }
+ s.source           = { :http => "https://github.com/indigo-d/luna_ios_sdk/releases/download/v#{s.version}/LunaSDK-#{s.version}.zip" }
  s.vendored_frameworks = 'Frameworks/LunaSDK.xcframework'
 
 # disable when building as framework
