@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
 
 # enable when building as framework
- s.source           = { :http => 'https://github.com/indigo-d/luna_ios_published_sdk/releases/download/v0.1.78/LunaSDK-0.1.78.zip' }
- s.vendored_frameworks = ['Frameworks/LunaSDK.xcframework']
+ s.source           = { :http => 'https://github.com/indigo-d/luna_ios_sdk/releases/download/v{s.version}/LunaSDK-{s.version}.zip' }
+ s.vendored_frameworks = 'Frameworks/LunaSDK.xcframework'
 
 # disable when building as framework
   # s.source_files = ['LunaSDK/Classes/**/*','LunaSDK/ExternalLibraries/**/*']
@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
   s.swift_version =  "5.0"
 
 # next 2 lines are disabled while trying to make it compile on m1
-# s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386', 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'i386'  }
-#   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386', 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'i386'  }
+s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386', 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'i386'  }
+s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 i386', 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'i386'  }
 
 end
